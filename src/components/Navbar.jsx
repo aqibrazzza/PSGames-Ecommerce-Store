@@ -23,8 +23,8 @@ export default function Navbar() {
 	}, [menuIsOpened]);
 
 	return (
-		<nav className="bg-gray-100">
-			<div className="flex justify-between py-3 container">
+		<nav className="bg-gray-100 font">
+			<div className="flex justify-between items-center py-3 container">
 				<div className="text-xl font-bold uppercase">Logo</div>
 				<div className="hidden sm:block">
 					<ul className="flex space-x-8">

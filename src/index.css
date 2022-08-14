@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'Albert Sans', sans-serif;
+  }
+}
+
 @layer components {
   .container {
     @apply w-[88%] max-w-[1280px] mx-auto
