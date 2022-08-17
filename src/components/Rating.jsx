@@ -1,8 +1,8 @@
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
-export default function Rating({ product }) {
+export default function Rating({ game }) {
 	const rating = () => {
-		if (product.rating > 4.5 && product.rating <= 5) {
+		if (game.rating > 4.5 && game.rating <= 5) {
 			return (
 				<>
 					<BsStarFill />
@@ -12,7 +12,7 @@ export default function Rating({ product }) {
 					<BsStarFill />
 				</>
 			);
-		} else if (product.rating > 4 && product.rating <= 4.5) {
+		} else if (game.rating > 4 && game.rating <= 4.5) {
 			return (
 				<>
 					<BsStarFill />
@@ -22,7 +22,7 @@ export default function Rating({ product }) {
 					<BsStarHalf />
 				</>
 			);
-		} else if (product.rating > 3.5 && product.rating <= 4) {
+		} else if (game.rating > 3.5 && game.rating <= 4) {
 			return (
 				<>
 					<BsStarFill />
@@ -32,7 +32,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 3 && product.rating <= 3.5) {
+		} else if (game.rating > 3 && game.rating <= 3.5) {
 			return (
 				<>
 					<BsStarFill />
@@ -42,7 +42,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 2.5 && product.rating <= 3) {
+		} else if (game.rating > 2.5 && game.rating <= 3) {
 			return (
 				<>
 					<BsStarFill />
@@ -52,7 +52,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 2 && product.rating <= 2.5) {
+		} else if (game.rating > 2 && game.rating <= 2.5) {
 			return (
 				<>
 					<BsStarFill />
@@ -62,7 +62,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 1.5 && product.rating <= 2) {
+		} else if (game.rating > 1.5 && game.rating <= 2) {
 			return (
 				<>
 					<BsStarFill />
@@ -72,7 +72,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 1 && product.rating <= 1.5) {
+		} else if (game.rating > 1 && game.rating <= 1.5) {
 			return (
 				<>
 					<BsStarFill />
@@ -82,7 +82,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 0.5 && product.rating <= 1) {
+		} else if (game.rating > 0.5 && game.rating <= 1) {
 			return (
 				<>
 					<BsStarHalf />
@@ -92,7 +92,7 @@ export default function Rating({ product }) {
 					<BsStar />
 				</>
 			);
-		} else if (product.rating > 0 && product.rating <= 0.5) {
+		} else if (game.rating > 0 && game.rating <= 0.5) {
 			return (
 				<>
 					<BsStarFill />

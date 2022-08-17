@@ -1,11 +1,12 @@
 import Navbar from "./components/Navbar";
-import ProductsList from "./components/ProductsList";
+import GameList from "./components/GameList";
+import { Route } from "react-router-dom";
 
 function App() {
 	return (
 		<div>
 			<Navbar />
-			<ProductsList />
+			<GameList />
 		</div>
 	);
 }
