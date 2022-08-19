@@ -104,5 +104,5 @@ export default function Rating({ game }) {
 			);
 		}
 	};
-	return <p className="flex ml-2 text-yellow-500">{rating()}</p>;
+	return <span className="flex ml-2 text-yellow-500">{rating()}</span>;
 }

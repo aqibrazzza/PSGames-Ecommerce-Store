@@ -29,7 +29,7 @@ export default function Navbar() {
 			<div className="flex justify-between items-center py-3 container">
 				<Link
 					to="/"
-					className="text-2xl text-blue-600 flex items-center space-x-1 cursor-pointer"
+					className="text-2xl text-blue-700 flex items-center space-x-1 cursor-pointer"
 				>
 					<MdGames />
 					<span className="text-slate-400 font-medium tracking-tight">

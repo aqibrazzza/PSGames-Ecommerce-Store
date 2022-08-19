@@ -12,4 +12,7 @@
   .container {
     @apply w-[88%] max-w-[1280px] mx-auto
   }
+  .btn {
+    @apply bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-semibold rounded-full px-6 py-4 capitalize
+  }
 }
