@@ -25,7 +25,7 @@ export default function Navbar() {
 	}, [menuIsOpened]);
 
 	return (
-		<nav className="bg-white">
+		<nav className="bg-white drop-shadow-sm">
 			<div className="flex justify-between items-center py-3 container">
 				<Link
 					to="/"
@@ -72,7 +72,7 @@ export default function Navbar() {
 						/>
 					)}
 					<div
-						className={`absolute top-14 right-1 bg-gray-100 py-4 px-2 rounded ${
+						className={`absolute top-14 right-1 bg-white py-4 px-2 rounded ${
 							!menuIsOpened && "hidden"
 						}`}
 					>
