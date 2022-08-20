@@ -43,15 +43,11 @@ export default function GameDetail() {
 	}, []);
 
 	return (
-		<div className="container py-24 md:flex md:justify-around">
-			<div className="">
-				<img
-					className="w-80 mx-auto"
-					src={game?.image}
-					alt="game.name"
-				/>
+		<div className="container py-28 md:flex md:justify-around md:space-x-20">
+			<div className="w-96 mx-auto">
+				<img className="" src={game?.image} alt="game.name" />
 			</div>
-			<div className="mt-6 md:mt-0">
+			<div className="mt-12 md:mt-0">
 				<div className="space-y-2">
 					<h1 className="text-3xl tracking-tight font-semibold">
 						{game?.name}
