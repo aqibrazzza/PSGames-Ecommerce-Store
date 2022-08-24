@@ -1,7 +1,7 @@
-import Navbar from "./components/Navbar";
-import GameDetail from "./pages/GameDetail";
+import Navbar from "../components/Navbar";
+import GameDetail from "../pages/GameDetail";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "../pages/Home";
 
 function App() {
 	return (
