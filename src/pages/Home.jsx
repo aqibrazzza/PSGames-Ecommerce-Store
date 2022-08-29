@@ -1,27 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import GameList from "../components/GameList";
+import { useDispatch, useSelector } from "react-redux";
+import { getGames } from "../features/games/gamesSlice";
 
 export default function Home() {
-	const [games, setGames] = useState(null);
-	const [isPending, setIsPending] = useState(false);
-	const [error, setError] = useState(null);
-
-	const fetchGames = async () => {
-		try {
-			setError(null);
-			setIsPending(true);
-			const res = await axios.get("http://localhost:3000/games");
-			setGames(res.data);
-			setIsPending(false);
-		} catch (err) {
-			setIsPending(false);
-			setError(err.message);
-		}
-	};
+	const dispatch = useDispatch();
+	const { games, isPending, error } = useSelector((state) => state.games);
 
 	useEffect(() => {
-		fetchGames();
+		dispatch(getGames());
 	}, []);
 
 	return (
