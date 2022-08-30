@@ -39,6 +39,7 @@ const gamesSlice = createSlice({
 			// get single game details request
 			builder.addCase(getGameDetails.pending, (state) => {
 				state.error = null;
+				state.getGameDetails = [];
 				state.isPending = true;
 			}),
 			builder.addCase(getGameDetails.fulfilled, (state, action) => {
