@@ -2,7 +2,7 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 export default function Rating({ game }) {
 	const rating = () => {
-		if (game.rating > 4.5 && game.rating <= 5) {
+		if (game.rating == 5) {
 			return (
 				<>
 					<BsStarFill />
@@ -10,6 +10,16 @@ export default function Rating({ game }) {
 					<BsStarFill />
 					<BsStarFill />
 					<BsStarFill />
+				</>
+			);
+		} else if (game.rating > 4.5 && game.rating <= 5) {
+			return (
+				<>
+					<BsStarFill />
+					<BsStarFill />
+					<BsStarFill />
+					<BsStarFill />
+					<BsStarHalf />
 				</>
 			);
 		} else if (game.rating > 4 && game.rating <= 4.5) {

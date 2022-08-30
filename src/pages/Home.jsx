@@ -18,7 +18,7 @@ export default function Home() {
 			{isPending && (
 				<img
 					className="mx-auto my-auto"
-					src="images/spinner-circle.svg"
+					src="/images/spinner-circle.svg"
 					alt="loading spinner"
 				/>
 			)}
