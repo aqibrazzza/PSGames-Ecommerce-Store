@@ -1,14 +1,10 @@
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 export default function GameItem({ game }) {
-	const handleClick = (e) => {
-		console.log(game.name);
-	};
 	return (
 		<Link
 			to={`/game/${game.id}`}
 			className="bg-white shadow-xl h-fit rounded-3xl cursor-pointer"
-			onClick={handleClick}
 		>
 			<div className="p-5">
 				<img src={game.image} alt={game.name} />

@@ -2,7 +2,8 @@ import { MenuAlt3Icon } from "@heroicons/react/outline";
 import { XIcon } from "@heroicons/react/outline";
 import { MdGames } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
 
 export default function Navbar() {
 	const [menuIsOpened, setMenuIsOpened] = useState(false);
@@ -38,17 +39,13 @@ export default function Navbar() {
 				</Link>
 				<div className="hidden sm:block">
 					<ul className="flex space-x-8">
-						<li className="cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
-							Home
+						<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
+							<AiOutlineShoppingCart className="text-xl" />
+							<span className="font-medium">Cart</span>
 						</li>
-						<li className="cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
-							About
-						</li>
-						<li className="cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
-							Careers
-						</li>
-						<li className="cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
-							Contact
+						<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
+							<AiOutlineUser className="text-xl" />
+							<span className="font-medium">Login</span>
 						</li>
 					</ul>
 				</div>
@@ -77,17 +74,13 @@ export default function Navbar() {
 						}`}
 					>
 						<ul className="space-y-2">
-							<li className="cursor-pointer py-1 px-8 active:bg-gray-200 text-gray-500 hover:text-gray-700 active:text-gray-600">
-								Home
+							<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
+								<AiOutlineShoppingCart className="text-xl" />
+								<span className="font-medium">Cart</span>
 							</li>
-							<li className="cursor-pointer py-1 px-8 active:bg-gray-200 text-gray-500 hover:text-gray-700 active:text-gray-600">
-								About
-							</li>
-							<li className="cursor-pointer py-1 px-8 active:bg-gray-200 text-gray-500 hover:text-gray-700 active:text-gray-600">
-								Careers
-							</li>
-							<li className="cursor-pointer py-1 px-8 active:bg-gray-200 text-gray-500 hover:text-gray-700 active:text-gray-600">
-								Contact
+							<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
+								<AiOutlineUser className="text-xl" />
+								<span className="font-medium">Login</span>
 							</li>
 						</ul>
 					</div>

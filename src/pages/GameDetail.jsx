@@ -1,13 +1,12 @@
-import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { useParams, useNavigate } from "react-router-dom";
 import Rating from "../components/Rating";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { getGameDetails } from "../features/games/gamesSlice";
+import { addToCart } from "../features/cart/cartSlice";
 
 export default function GameDetail() {
-	const [qty, setQty] = useState(0);
+	const [qty, setQty] = useState(1);
 	// Get the game id param from the URL.
 	let { id } = useParams();
 
@@ -18,9 +17,16 @@ export default function GameDetail() {
 		getGameDetails: game,
 	} = useSelector((state) => state.games);
 
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		dispatch(getGameDetails(id));
 	}, [dispatch]);
+
+	const addToCartHandler = () => {
+		dispatch(addToCart({ game, qty }));
+		navigate(`/cart/${game.id}?qty=${qty}`);
+	};
 
 	return (
 		<div className="container py-28 md:flex md:justify-around md:space-x-20">
@@ -87,7 +93,10 @@ export default function GameDetail() {
 						</div>
 
 						{game?.inStock > 0 ? (
-							<button className="btn cursor-pointer">
+							<button
+								className="btn cursor-pointer"
+								onClick={addToCartHandler}
+							>
 								Add to Cart
 							</button>
 						) : (

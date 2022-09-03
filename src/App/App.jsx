@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import GameDetail from "../pages/GameDetail";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "../pages/Home";
-
+import Cart from "../pages/Cart";
 function App() {
 	return (
 		<BrowserRouter>
@@ -10,6 +10,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/game/:id" element={<GameDetail />} />
+				<Route path="/cart/:id" element={<Cart />} />
 				{/* If route does not match, show the following. */}
 				<Route
 					path="*"
