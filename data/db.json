@@ -1,7 +1,7 @@
 {
   "games": [
     {
-      "id": "1",
+      "id": 1,
       "name": "God of War Ragnarok Launch Edition",
       "image": "/images/gow.jpg",
       "description":
@@ -13,7 +13,7 @@
         "numberOfReviews": 288
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "FIFA 22 Standard Edition",
       "image": "/images/fifa22.jpg",
       "description":
@@ -24,7 +24,7 @@
         "numberOfReviews": 112
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "FIFA 21 Standard Edition",
       "image": "/images/fifa21.jpg",
       "description":
@@ -36,7 +36,7 @@
         "numberOfReviews": 225
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "The Last of Us Part I",
       "image": "/images/lastofus.jpg",
       "description":
@@ -48,7 +48,7 @@
         "numberOfReviews": 177
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Grand Theft Auto V Standard Edition",
       "image": "/images/gta5.jpg",
       "description":
@@ -60,7 +60,7 @@
         "numberOfReviews": 422
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Marvel's Spider-Man: Miles Morales Standard Launch Edition",
       "image": "/images/spiderman.jpg",
       "description":

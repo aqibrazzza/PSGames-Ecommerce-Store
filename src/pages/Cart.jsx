@@ -5,8 +5,6 @@ import CartList from "../components/CartList";
 export default function Cart() {
 	const loc = useLocation().search;
 	const search = new URLSearchParams(loc).get("qty");
-	console.log(search);
-
 	const cartItems = useSelector((state) => state.cart.cartItems);
 
 	return (
@@ -14,7 +12,11 @@ export default function Cart() {
 			<h1 className="text-3xl tracking-tight font-semibold max-w-md">
 				My shopping cart
 			</h1>
-			<CartList cartItems={cartItems} />
+			{cartItems.length !== 0 ? (
+				<CartList cartItems={cartItems} />
+			) : (
+				<p> Cart is empty. </p>
+			)}
 		</div>
 	);
 }

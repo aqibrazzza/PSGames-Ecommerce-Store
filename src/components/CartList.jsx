@@ -1,8 +1,12 @@
 import { AiOutlineDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../features/cart/cartSlice";
+
 export default function CartList({ cartItems }) {
-	console.log(cartItems);
-	const handleDelete = () => {
-		console.log("del btn clicked");
+	const dispatch = useDispatch();
+	const handleDelete = (id) => {
+		dispatch(removeFromCart(id));
+		console.log(cartItems);
 	};
 	return (
 		<ul className="sm:px-8">
@@ -20,7 +24,7 @@ export default function CartList({ cartItems }) {
 						<p className="">{item.qty}</p>
 						<AiOutlineDelete
 							className="text-lg cursor-pointer"
-							onClick={handleDelete}
+							onClick={() => handleDelete(item.id)}
 						/>
 					</li>
 				);
