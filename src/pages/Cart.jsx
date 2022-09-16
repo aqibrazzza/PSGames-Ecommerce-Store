@@ -13,7 +13,26 @@ export default function Cart() {
 				My shopping cart
 			</h1>
 			{cartItems.length !== 0 ? (
-				<CartList cartItems={cartItems} />
+				<>
+					<CartList cartItems={cartItems} />
+					<div>
+						<h1 className="text-xl font-semibold">
+							Subtotal:{" "}
+							{cartItems.reduce(
+								(accumulator, current) =>
+									accumulator + current.qty,
+								0
+							)}{" "}
+							items
+						</h1>
+						<p>
+							$
+							{cartItems.reduce((prev, current) => {
+								return prev + current.qty * current.price;
+							}, 0)}
+						</p>
+					</div>
+				</>
 			) : (
 				<p> Cart is empty. </p>
 			)}
