@@ -4,6 +4,7 @@ import { MdGames } from "react-icons/md";
 import { useState, useRef, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineShoppingCart, AiOutlineUser } from "react-icons/ai";
+import Cart from "../pages/Cart";
 
 export default function Navbar() {
 	const [menuIsOpened, setMenuIsOpened] = useState(false);
@@ -39,10 +40,13 @@ export default function Navbar() {
 				</Link>
 				<div className="hidden sm:block">
 					<ul className="flex space-x-8">
-						<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
+						<NavLink
+							to="/cart"
+							className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600"
+						>
 							<AiOutlineShoppingCart className="text-xl" />
 							<span className="font-medium">Cart</span>
-						</li>
+						</NavLink>
 						<li className="flex items-center space-x-1 cursor-pointer text-gray-500 hover:text-gray-700 active:text-gray-600">
 							<AiOutlineUser className="text-xl" />
 							<span className="font-medium">Login</span>

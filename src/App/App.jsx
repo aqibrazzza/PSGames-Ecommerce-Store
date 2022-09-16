@@ -10,6 +10,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/game/:id" element={<GameDetail />} />
+				<Route path="/cart" element={<Cart />} />
 				<Route path="/cart/:id" element={<Cart />} />
 				{/* If route does not match, show the following. */}
 				<Route
